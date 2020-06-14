@@ -70,17 +70,15 @@ const computeProduct = (arr) => {
   ```javascript
   var array = [7, 8, 4, 9, 9, 15, 3, 1, 10];
   var sort=array.sort();
+  var len=sort.length;
 
   //Write your program here
   function  findLargestDifference(arr){
-    for(let i=0;i<arr.length;i++){
-       let a=arr[i+1]-arr[i]
-       let b=arr[i+2]-arr[i+1]
-    if(a>b)
-       return a;
-    else 
-       return b;
-  }}
+    
+    let a=arr[len-1]-arr[0];
+    
+    return a;
+    }
   findLargestDifference(sort);
 
   ```
@@ -102,9 +100,10 @@ const computeProduct = (arr) => {
   var firstArray = [2, 2, 4, 1];
   var secondArray = [1, 2, 0, 2];
 
- 
-  //Write your program here
-
+ let intersection = firstArray.filter(x =>secondArray.includes(x));
+ let inter=[...new Set(intersection)];
+ console.log(inter);
+  
   ```
 
 **[⬆ back to top](#table-of-contents)**
@@ -117,6 +116,10 @@ const computeProduct = (arr) => {
   var string = "Welcome to this Javascript Guide!";
 
   //Write your program here
+ 
+
+var result = string.split("").reverse().join("").split(" ").reverse().join(" ");
+console.log(result);
   ```
 
 <a name="string--anagram"></a><a name="2.2"></a>
@@ -126,7 +129,12 @@ const computeProduct = (arr) => {
   var firstWord = "Mary";
   var secondWord = "Army";
 
-    //Write your program here
+   
+
+//Write your program here
+var a = firstWord.toLowerCase().split("").sort().join("");
+var b = secondWord.toLowerCase().split("").sort().join("");
+console.log(a === b);
   ```
 <a name="string--palindrome"></a><a name="2.3"></a>
 - **[2.3](#string--palindrome) Check if a given string is a palindrome**
