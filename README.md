@@ -101,7 +101,9 @@ const computeProduct = (arr) => {
   var secondArray = [1, 2, 0, 2];
 
  let intersection = firstArray.filter(x =>secondArray.includes(x));
+
  let inter=[...new Set(intersection)];
+
  console.log(inter);
   
   ```
@@ -118,8 +120,9 @@ const computeProduct = (arr) => {
   //Write your program here
  
 
-var result = string.split("").reverse().join("").split(" ").reverse().join(" ");
-console.log(result);
+var ouput = string.split("").reverse().join("").split(" ").reverse().join(" ");
+
+console.log(output);
   ```
 
 <a name="string--anagram"></a><a name="2.2"></a>
@@ -133,7 +136,9 @@ console.log(result);
 
 //Write your program here
 var a = firstWord.toLowerCase().split("").sort().join("");
+
 var b = secondWord.toLowerCase().split("").sort().join("");
+
 console.log(a === b);
   ```
 <a name="string--palindrome"></a><a name="2.3"></a>
