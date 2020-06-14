@@ -14,9 +14,18 @@
   ```javascript
   var unsortedArray = [-10, 7, 29, 30, 5, -10, -70];
 
-  computeProduct(unsortedArray); // 21000
+  
+ 
+const computeProduct = (arr) => {
+  sortedArr = arr.sort((a, b) => a - b);
+  let len = arr.length;
+  let maxProduct = sortedArr[len-1] * sortedArr[len-2] * sortedArr[len-3];
+  return maxProduct;
+}
 
-  //Write your program here
+
+  computeProduct(unsortedArray); // 21000
+ 
   
   ```
  
@@ -29,7 +38,19 @@
   var lowerBound = 1;
 
   //Write your program here
-  
+   var sort=arrayOfIntegers.sort();
+  for(let i=0;i<=sort.length;i++){
+        
+     if(lowerBound==sort[i]){
+        
+        lowerBound++;
+     }
+     else{
+        console.log(lowerBound);
+     }
+     
+  }
+   //Write your program here
   ```
 
 <a name="array--unique"></a><a name="1.3"></a>
@@ -37,20 +58,30 @@
   ```javascript
   // ES6 Implementation
   var array = [1, 2, 3, 5, 1, 5, 9, 1, 2, 8];
-
-   //Write your program here
-
   
-  ```
+   //Write your program here
+   function removeduplicate(arr){
+     return [...new Set(arr)]
+   }
+   console.log(removeduplicates(array))
 
 <a name="array--largest-difference"></a><a name="1.4"></a>
 - **[1.4](#array--largest-difference) Given an array of integers, find the largest difference between two elements such that the element of lesser value must come before the greater element**
   ```javascript
   var array = [7, 8, 4, 9, 9, 15, 3, 1, 10];
-
-  findLargestDifference(array);
+  var sort=array.sort();
 
   //Write your program here
+  function  findLargestDifference(arr){
+    for(let i=0;i<arr.length;i++){
+       let a=arr[i+1]-arr[i]
+       let b=arr[i+2]-arr[i+1]
+    if(a>b)
+       return a;
+    else 
+       return b;
+  }}
+  findLargestDifference(sort);
 
   ```
   
